@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://dpo63gk2682gm"]
+
+[ext_resource type="Script" uid="uid://bipl856smhhcl" path="res://Script/MenuScript/main_menu.gd" id="1_7jtkx"]
+[ext_resource type="Texture2D" uid="uid://5bxi6xihny7g" path="res://Assets/Buttons/AlienCatcherButton.png" id="1_tself"]
+[ext_resource type="Texture2D" uid="uid://cde5a2m72rfug" path="res://Assets/Buttons/AlienRockPaperScissorButton.png" id="2_7jtkx"]
+
+[node name="MainMenu" type="Control" unique_id=1577567927]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7jtkx")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1823503303]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.83137256, 0.9254902, 0.89411765, 1)
+
+[node name="AlienCatcherButton" type="TextureButton" parent="." unique_id=1092689656]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.22900002
+anchor_top = 0.284
+anchor_right = 0.22900002
+anchor_bottom = 0.284
+offset_left = -23.808014
+offset_top = 23.967987
+offset_right = 976.192
+offset_bottom = 1023.968
+scale = Vector2(0.3150387, 0.3150387)
+texture_normal = ExtResource("1_tself")
+
+[node name="AlienRockPaperScissor" type="TextureButton" parent="." unique_id=1385816708]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.528
+anchor_top = 0.284
+anchor_right = 0.528
+anchor_bottom = 0.284
+offset_left = -24.255981
+offset_top = 23.967987
+offset_right = 975.744
+offset_bottom = 1023.968
+scale = Vector2(0.3150387, 0.3150387)
+texture_normal = ExtResource("2_7jtkx")
+
+[node name="Label" type="Label" parent="." unique_id=1694861129]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.042000003
+anchor_top = 0.11100001
+anchor_right = 0.042000003
+anchor_bottom = 0.11100001
+offset_left = -0.3840027
+offset_top = 0.07199097
+offset_right = 595.61597
+offset_bottom = 83.07199
+theme_override_colors/font_color = Color(0.28627452, 0.4509804, 0.39607844, 1)
+theme_override_font_sizes/font_size = 60
+text = "Choose A Mini Game"
+
+[connection signal="pressed" from="AlienCatcherButton" to="." method="_on_alien_catcher_button_pressed"]
+[connection signal="pressed" from="AlienRockPaperScissor" to="." method="_on_alien_rock_paper_scissor_pressed"]
